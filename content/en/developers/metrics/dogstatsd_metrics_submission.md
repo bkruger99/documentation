@@ -991,6 +991,8 @@ Before sending a metric to Datadog, DogStatsD uses the `<SAMPLE_RATE>` to correc
 | `SET`       | No correction. The value received is kept as is.                                                                                                                               |
 | `HISTOGRAM` | The `histogram.count` statistic is a COUNT metric, and receives the correction outlined above. Other statistics are gauge metrics and aren't "corrected".                      |
 
+**Note:** Distribution Metrics will only use the sampled values.
+
 #### Code examples
 
 The following code only sends points half of the time:
